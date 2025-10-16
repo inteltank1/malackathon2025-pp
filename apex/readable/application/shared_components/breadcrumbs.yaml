@@ -1,0 +1,77 @@
+---
+- # ====== Breadcrumb: Breadcrumb ==============================
+  id: 9628457241830644
+  identification: 
+    name: Breadcrumb
+
+  entries: 
+  - # ====== Entry: Home =========================================
+    id: 9628620307830645
+    identification: 
+      name: Home
+      page-number: 1
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:::'
+        page: 1 # Home
+
+  - # ====== Entry: Reportaje ====================================
+    id: 9786346623831363
+    identification: 
+      name: Reportaje
+      page-number: 2
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:2:&APP_SESSION.::&DEBUG.:::'
+        page: 2 # Reportaje
+
+  - # ====== Entry: Filtrar ======================================
+    id: 9836112948831543
+    identification: 
+      name: Filtrar
+      page-number: 4
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&APP_SESSION.::&DEBUG.:::'
+        page: 4 # Filtrar
+
+  - # ====== Entry: Varios Datos =================================
+    id: 9846392760831582
+    identification: 
+      name: Varios Datos
+      page-number: 5
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:5:&APP_SESSION.::&DEBUG.:::'
+        page: 5 # Varios Datos
+
+  - # ====== Entry: Administration ===============================
+    id: 10048969305832431
+    identification: 
+      name: Administration
+      page-number: 10000
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:10000:&APP_SESSION.::&DEBUG.:::'
+        page: 10000 # Administration
+
