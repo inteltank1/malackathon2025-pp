@@ -1,0 +1,2906 @@
+---
+# ====== Page: Filtrar =======================================
+id: 4
+identification: 
+  name: Filtrar
+  alias: FILTRAR
+  title: Filtrar
+
+appearance: 
+  page-mode: Normal
+  page-template: Standard
+  template-options: 
+  - '#DEFAULT#'
+
+navigation-menu: 
+  override-user-interface-level: false
+
+navigation: 
+  cursor-focus: Do not focus cursor
+  warn-on-unsaved-changes: true
+
+security: 
+  authentication: Page Requires Authentication
+  deep-linking: Application Default
+  page-access-protection: Arguments Must Have Checksum
+  form-auto-complete: Off
+  browser-cache: Application Default
+
+session-management: 
+  rejoin-sessions: Application Default
+
+advanced: 
+  enable-duplicate-page-submissions: Yes - Enable page to be re-posted
+  reload-on-submit: Only for Success
+
+server-cache: 
+  caching: Disabled
+
+regions: 
+- # ====== Region: Search Results ==============================
+  id: 9787738919831373
+  identification: 
+    name: Search Results
+    type: Classic Report
+
+  source: 
+    location: Local Database
+    type: Table / View
+    table-owner: Parsing Schema
+    table-name: SALUDMENTAL
+    include-rowid-column: false
+
+  order-by: 
+    type: None
+
+  layout: 
+    sequence: 20
+    parent-region: No Parent
+    slot: BODY
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Standard
+    template-options: 
+    - '#DEFAULT#'
+    - t-Region--noPadding
+    - t-Region--hideHeader js-addHiddenHeadingRoleDesc
+    - t-Region--scrollBody
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    region-display-selector: false
+    exclude-title-from-translation: false
+
+  server-cache: 
+    caching: Disabled
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    layout: 
+      number-of-rows-type: Static Value
+      number-of-rows: 50
+
+    appearance: 
+      template-type: Theme
+      template: Standard
+      template-options: 
+      - '#DEFAULT#'
+      - t-Report--stretch
+      - t-Report--staticRowColors
+      - t-Report--rowHighlight
+      - t-Report--inline
+      - t-Report--hideNoPagination
+
+    pagination: 
+      type: Row Ranges X to Y (with next and previous links)
+      display-position: Bottom - Right
+      partial-page-refresh: true
+
+    performance: 
+      lazy-loading: false
+      maximum-rows-to-process: 100000
+
+    messages: 
+      when-no-data-found: no data found
+
+    break-formatting: 
+      break-columns: No Break
+
+    advanced: 
+      strip-html: false
+      sort-nulls: Last
+
+    heading: 
+      type: Custom Headings
+
+    download: 
+      csv-export-enabled: false
+
+    printing: 
+      enabled: false
+
+  columns: 
+  - # ====== Column: COMUNIDAD_AUTÓNOMA ==========================
+    id: 9790903421831408
+    identification: 
+      column-name: COMUNIDAD_AUTÓNOMA
+      type: Plain Text
+
+    heading: 
+      heading: Comunidad Autónoma
+      alignment: start
+
+    layout: 
+      sequence: 1
+      column-alignment: start
+
+    accessibility: 
+      value-identifies-row: false
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+      sortable: true
+
+    export-/-printing: 
+      include-in-export-/-print: true
+
+    advanced: 
+      compute-sum: false
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: NOMBRE ======================================
+    id: 9791382579831409
+    identification: 
+      column-name: NOMBRE
+      type: Plain Text
+
+    heading: 
+      heading: Nombre
+      alignment: start
+
+    layout: 
+      sequence: 2
+      column-alignment: start
+
+    accessibility: 
+      value-identifies-row: false
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+      sortable: true
+
+    export-/-printing: 
+      include-in-export-/-print: true
+
+    advanced: 
+      compute-sum: false
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: FECHA_DE_NACIMIENTO =========================
+    id: 9791713072831410
+    identification: 
+      column-name: FECHA_DE_NACIMIENTO
+      type: Plain Text
+
+    heading: 
+      heading: Fecha De Nacimiento
+      alignment: start
+
+    layout: 
+      sequence: 3
+      column-alignment: start
+
+    accessibility: 
+      value-identifies-row: false
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+      sortable: true
+
+    export-/-printing: 
+      include-in-export-/-print: true
+
+    advanced: 
+      compute-sum: false
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: SEXO ========================================
+    id: 9792134573831412
+    identification: 
+      column-name: SEXO
+      type: Plain Text
+
+    heading: 
+      heading: Sexo
+      alignment: end
+
+    layout: 
+      sequence: 4
+      column-alignment: end
+
+    accessibility: 
+      value-identifies-row: false
+
+    appearance: 
+      format-mask: 999G999G999G999G999G999G999G999G999G990
+
+    sorting: 
+      sortable: true
+
+    export-/-printing: 
+      include-in-export-/-print: true
+
+    advanced: 
+      compute-sum: false
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: CCAA_RESIDENCIA =============================
+    id: 9792555877831413
+    identification: 
+      column-name: CCAA_RESIDENCIA
+      type: Plain Text
+
+    heading: 
+      heading: Ccaa Residencia
+      alignment: start
+
+    layout: 
+      sequence: 5
+      column-alignment: start
+
+    accessibility: 
+      value-identifies-row: false
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+      sortable: true
+
+    export-/-printing: 
+      include-in-export-/-print: true
+
+    advanced: 
+      compute-sum: false
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: FECHA_DE_INGRESO ============================
+    id: 9792973474831414
+    identification: 
+      column-name: FECHA_DE_INGRESO
+      type: Plain Text
+
+    heading: 
+      heading: Fecha De Ingreso
+      alignment: start
+
+    layout: 
+      sequence: 6
+      column-alignment: start
+
+    accessibility: 
+      value-identifies-row: false
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+      sortable: true
+
+    export-/-printing: 
+      include-in-export-/-print: true
+
+    advanced: 
+      compute-sum: false
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: CIRCUNSTANCIA_DE_CONTACTO ===================
+    id: 9793346712831415
+    identification: 
+      column-name: CIRCUNSTANCIA_DE_CONTACTO
+      type: Plain Text
+
+    heading: 
+      heading: Circunstancia De Contacto
+      alignment: end
+
+    layout: 
+      sequence: 7
+      column-alignment: end
+
+    accessibility: 
+      value-identifies-row: false
+
+    appearance: 
+      format-mask: 999G999G999G999G999G999G999G999G999G990D0
+
+    sorting: 
+      sortable: true
+
+    export-/-printing: 
+      include-in-export-/-print: true
+
+    advanced: 
+      compute-sum: false
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: FECHA_DE_FIN_CONTACTO =======================
+    id: 9793742864831416
+    identification: 
+      column-name: FECHA_DE_FIN_CONTACTO
+      type: Plain Text
+
+    heading: 
+      heading: Fecha De Fin Contacto
+      alignment: start
+
+    layout: 
+      sequence: 8
+      column-alignment: start
+
+    accessibility: 
+      value-identifies-row: false
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+      sortable: true
+
+    export-/-printing: 
+      include-in-export-/-print: true
+
+    advanced: 
+      compute-sum: false
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: TIPO_ALTA ===================================
+    id: 9794113630831417
+    identification: 
+      column-name: TIPO_ALTA
+      type: Plain Text
+
+    heading: 
+      heading: Tipo Alta
+      alignment: end
+
+    layout: 
+      sequence: 9
+      column-alignment: end
+
+    accessibility: 
+      value-identifies-row: false
+
+    appearance: 
+      format-mask: 999G999G999G999G999G999G999G999G999G990
+
+    sorting: 
+      sortable: true
+
+    export-/-printing: 
+      include-in-export-/-print: true
+
+    advanced: 
+      compute-sum: false
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: ESTANCIA_DÍAS ===============================
+    id: 9794503772831419
+    identification: 
+      column-name: ESTANCIA_DÍAS
+      type: Plain Text
+
+    heading: 
+      heading: Estancia Días
+      alignment: end
+
+    layout: 
+      sequence: 10
+      column-alignment: end
+
+    accessibility: 
+      value-identifies-row: false
+
+    appearance: 
+      format-mask: 999G999G999G999G999G999G999G999G999G990
+
+    sorting: 
+      sortable: true
+
+    export-/-printing: 
+      include-in-export-/-print: true
+
+    advanced: 
+      compute-sum: false
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_PRINCIPAL =======================
+    id: 9794950191831420
+    identification: 
+      column-name: DIAGNÓSTICO_PRINCIPAL
+      type: Hidden
+
+    layout: 
+      sequence: 11
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: CATEGORÍA ===================================
+    id: 9795375854831421
+    identification: 
+      column-name: CATEGORÍA
+      type: Hidden
+
+    layout: 
+      sequence: 12
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_2 ===============================
+    id: 9795779025831422
+    identification: 
+      column-name: DIAGNÓSTICO_2
+      type: Hidden
+
+    layout: 
+      sequence: 13
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_3 ===============================
+    id: 9796111793831424
+    identification: 
+      column-name: DIAGNÓSTICO_3
+      type: Hidden
+
+    layout: 
+      sequence: 14
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_4 ===============================
+    id: 9796524509831425
+    identification: 
+      column-name: DIAGNÓSTICO_4
+      type: Hidden
+
+    layout: 
+      sequence: 15
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_5 ===============================
+    id: 9796907532831426
+    identification: 
+      column-name: DIAGNÓSTICO_5
+      type: Hidden
+
+    layout: 
+      sequence: 16
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_6 ===============================
+    id: 9797398717831428
+    identification: 
+      column-name: DIAGNÓSTICO_6
+      type: Hidden
+
+    layout: 
+      sequence: 17
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_7 ===============================
+    id: 9797715661831429
+    identification: 
+      column-name: DIAGNÓSTICO_7
+      type: Hidden
+
+    layout: 
+      sequence: 18
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_8 ===============================
+    id: 9798124287831430
+    identification: 
+      column-name: DIAGNÓSTICO_8
+      type: Hidden
+
+    layout: 
+      sequence: 19
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_9 ===============================
+    id: 9798575980831431
+    identification: 
+      column-name: DIAGNÓSTICO_9
+      type: Hidden
+
+    layout: 
+      sequence: 20
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_10 ==============================
+    id: 9798924564831432
+    identification: 
+      column-name: DIAGNÓSTICO_10
+      type: Hidden
+
+    layout: 
+      sequence: 21
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_11 ==============================
+    id: 9799326738831434
+    identification: 
+      column-name: DIAGNÓSTICO_11
+      type: Hidden
+
+    layout: 
+      sequence: 22
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_12 ==============================
+    id: 9799773655831435
+    identification: 
+      column-name: DIAGNÓSTICO_12
+      type: Hidden
+
+    layout: 
+      sequence: 23
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_13 ==============================
+    id: 9800114058831436
+    identification: 
+      column-name: DIAGNÓSTICO_13
+      type: Hidden
+
+    layout: 
+      sequence: 24
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_14 ==============================
+    id: 9800516514831437
+    identification: 
+      column-name: DIAGNÓSTICO_14
+      type: Hidden
+
+    layout: 
+      sequence: 25
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: FECHA_DE_INTERVENCIÓN =======================
+    id: 9800949503831438
+    identification: 
+      column-name: FECHA_DE_INTERVENCIÓN
+      type: Hidden
+
+    layout: 
+      sequence: 26
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_1 =============================
+    id: 9801390221831440
+    identification: 
+      column-name: PROCEDIMIENTO_1
+      type: Hidden
+
+    layout: 
+      sequence: 27
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_2 =============================
+    id: 9801724264831441
+    identification: 
+      column-name: PROCEDIMIENTO_2
+      type: Hidden
+
+    layout: 
+      sequence: 28
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_3 =============================
+    id: 9802115528831442
+    identification: 
+      column-name: PROCEDIMIENTO_3
+      type: Hidden
+
+    layout: 
+      sequence: 29
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_4 =============================
+    id: 9802516791831443
+    identification: 
+      column-name: PROCEDIMIENTO_4
+      type: Hidden
+
+    layout: 
+      sequence: 30
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_5 =============================
+    id: 9802931422831445
+    identification: 
+      column-name: PROCEDIMIENTO_5
+      type: Hidden
+
+    layout: 
+      sequence: 31
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_6 =============================
+    id: 9803304288831446
+    identification: 
+      column-name: PROCEDIMIENTO_6
+      type: Hidden
+
+    layout: 
+      sequence: 32
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_7 =============================
+    id: 9803762767831447
+    identification: 
+      column-name: PROCEDIMIENTO_7
+      type: Hidden
+
+    layout: 
+      sequence: 33
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_8 =============================
+    id: 9804117338831448
+    identification: 
+      column-name: PROCEDIMIENTO_8
+      type: Hidden
+
+    layout: 
+      sequence: 34
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_9 =============================
+    id: 9804527442831449
+    identification: 
+      column-name: PROCEDIMIENTO_9
+      type: Hidden
+
+    layout: 
+      sequence: 35
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_10 ============================
+    id: 9804980289831450
+    identification: 
+      column-name: PROCEDIMIENTO_10
+      type: Hidden
+
+    layout: 
+      sequence: 36
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_11 ============================
+    id: 9805386498831452
+    identification: 
+      column-name: PROCEDIMIENTO_11
+      type: Hidden
+
+    layout: 
+      sequence: 37
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_12 ============================
+    id: 9805745398831453
+    identification: 
+      column-name: PROCEDIMIENTO_12
+      type: Hidden
+
+    layout: 
+      sequence: 38
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_13 ============================
+    id: 9806183724831454
+    identification: 
+      column-name: PROCEDIMIENTO_13
+      type: Hidden
+
+    layout: 
+      sequence: 39
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_14 ============================
+    id: 9806548634831455
+    identification: 
+      column-name: PROCEDIMIENTO_14
+      type: Hidden
+
+    layout: 
+      sequence: 40
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_15 ============================
+    id: 9806968452831456
+    identification: 
+      column-name: PROCEDIMIENTO_15
+      type: Hidden
+
+    layout: 
+      sequence: 41
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_16 ============================
+    id: 9807368892831457
+    identification: 
+      column-name: PROCEDIMIENTO_16
+      type: Hidden
+
+    layout: 
+      sequence: 42
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_17 ============================
+    id: 9807765171831459
+    identification: 
+      column-name: PROCEDIMIENTO_17
+      type: Hidden
+
+    layout: 
+      sequence: 43
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_18 ============================
+    id: 9808113858831460
+    identification: 
+      column-name: PROCEDIMIENTO_18
+      type: Hidden
+
+    layout: 
+      sequence: 44
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_19 ============================
+    id: 9808543564831461
+    identification: 
+      column-name: PROCEDIMIENTO_19
+      type: Hidden
+
+    layout: 
+      sequence: 45
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_20 ============================
+    id: 9808965846831462
+    identification: 
+      column-name: PROCEDIMIENTO_20
+      type: Hidden
+
+    layout: 
+      sequence: 46
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: GDR_AP ======================================
+    id: 9809325141831463
+    identification: 
+      column-name: GDR_AP
+      type: Hidden
+
+    layout: 
+      sequence: 47
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: CDM_AP ======================================
+    id: 9809641128831464
+    identification: 
+      column-name: CDM_AP
+      type: Hidden
+
+    layout: 
+      sequence: 48
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: TIPO_GDR_AP =================================
+    id: 9810044201831466
+    identification: 
+      column-name: TIPO_GDR_AP
+      type: Hidden
+
+    layout: 
+      sequence: 49
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: VALOR_PESO_ESPAÑOL ==========================
+    id: 9810422168831467
+    identification: 
+      column-name: VALOR_PESO_ESPAÑOL
+      type: Hidden
+
+    layout: 
+      sequence: 50
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: GRD_APR =====================================
+    id: 9810884204831468
+    identification: 
+      column-name: GRD_APR
+      type: Hidden
+
+    layout: 
+      sequence: 51
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: CDM_APR =====================================
+    id: 9811222844831469
+    identification: 
+      column-name: CDM_APR
+      type: Hidden
+
+    layout: 
+      sequence: 52
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: TIPO_GDR_APR ================================
+    id: 9811621414831470
+    identification: 
+      column-name: TIPO_GDR_APR
+      type: Hidden
+
+    layout: 
+      sequence: 53
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: VALOR_PESO_AMERICANO_APR ====================
+    id: 9812086729831471
+    identification: 
+      column-name: VALOR_PESO_AMERICANO_APR
+      type: Hidden
+
+    layout: 
+      sequence: 54
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: NIVEL_SEVERIDAD_APR =========================
+    id: 9812440594831473
+    identification: 
+      column-name: NIVEL_SEVERIDAD_APR
+      type: Hidden
+
+    layout: 
+      sequence: 55
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: RIESGO_MORTALIDAD_APR =======================
+    id: 9812842172831474
+    identification: 
+      column-name: RIESGO_MORTALIDAD_APR
+      type: Hidden
+
+    layout: 
+      sequence: 56
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: SERVICIO ====================================
+    id: 9813287133831475
+    identification: 
+      column-name: SERVICIO
+      type: Hidden
+
+    layout: 
+      sequence: 57
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: EDAD ========================================
+    id: 9813652771831476
+    identification: 
+      column-name: EDAD
+      type: Hidden
+
+    layout: 
+      sequence: 58
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: REINGRESO ===================================
+    id: 9814048024831478
+    identification: 
+      column-name: REINGRESO
+      type: Hidden
+
+    layout: 
+      sequence: 59
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: COSTE_APR ===================================
+    id: 9814423691831479
+    identification: 
+      column-name: COSTE_APR
+      type: Hidden
+
+    layout: 
+      sequence: 60
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: GDR_IR ======================================
+    id: 9814801194831480
+    identification: 
+      column-name: GDR_IR
+      type: Hidden
+
+    layout: 
+      sequence: 61
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: TIPO_GDR_IR =================================
+    id: 9815226189831481
+    identification: 
+      column-name: TIPO_GDR_IR
+      type: Hidden
+
+    layout: 
+      sequence: 62
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: TIPO_PROCESO_IR =============================
+    id: 9815647926831483
+    identification: 
+      column-name: TIPO_PROCESO_IR
+      type: Hidden
+
+    layout: 
+      sequence: 63
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: CIE =========================================
+    id: 9816025956831484
+    identification: 
+      column-name: CIE
+      type: Hidden
+
+    layout: 
+      sequence: 64
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: NÚMERO_DE_REGISTRO_ANUAL ====================
+    id: 9816442235831485
+    identification: 
+      column-name: NÚMERO_DE_REGISTRO_ANUAL
+      type: Hidden
+
+    layout: 
+      sequence: 65
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: CENTRO_RECODIFICADO =========================
+    id: 9816845357831487
+    identification: 
+      column-name: CENTRO_RECODIFICADO
+      type: Hidden
+
+    layout: 
+      sequence: 66
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: CIP_SNS_RECODIFICADO ========================
+    id: 9817221179831488
+    identification: 
+      column-name: CIP_SNS_RECODIFICADO
+      type: Hidden
+
+    layout: 
+      sequence: 67
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PAÍS_NACIMIENTO =============================
+    id: 9817629320831489
+    identification: 
+      column-name: PAÍS_NACIMIENTO
+      type: Hidden
+
+    layout: 
+      sequence: 68
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PAÍS_RESIDENCIA =============================
+    id: 9818092663831490
+    identification: 
+      column-name: PAÍS_RESIDENCIA
+      type: Hidden
+
+    layout: 
+      sequence: 69
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: FECHA_DE_INICIO_CONTACTO ====================
+    id: 9818404606831491
+    identification: 
+      column-name: FECHA_DE_INICIO_CONTACTO
+      type: Hidden
+
+    layout: 
+      sequence: 70
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: RÉGIMEN_FINANCIACIÓN ========================
+    id: 9818879102831492
+    identification: 
+      column-name: RÉGIMEN_FINANCIACIÓN
+      type: Hidden
+
+    layout: 
+      sequence: 71
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDENCIA =================================
+    id: 9819235121831494
+    identification: 
+      column-name: PROCEDENCIA
+      type: Hidden
+
+    layout: 
+      sequence: 72
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: CONTINUIDAD_ASISTENCIAL =====================
+    id: 9819684157831495
+    identification: 
+      column-name: CONTINUIDAD_ASISTENCIAL
+      type: Hidden
+
+    layout: 
+      sequence: 73
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: INGRESO_EN_UCI ==============================
+    id: 9820059555831496
+    identification: 
+      column-name: INGRESO_EN_UCI
+      type: Hidden
+
+    layout: 
+      sequence: 74
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DÍAS_UCI ====================================
+    id: 9820461955831497
+    identification: 
+      column-name: DÍAS_UCI
+      type: Hidden
+
+    layout: 
+      sequence: 75
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_15 ==============================
+    id: 9820807252831498
+    identification: 
+      column-name: DIAGNÓSTICO_15
+      type: Hidden
+
+    layout: 
+      sequence: 76
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_16 ==============================
+    id: 9821284786831499
+    identification: 
+      column-name: DIAGNÓSTICO_16
+      type: Hidden
+
+    layout: 
+      sequence: 77
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_17 ==============================
+    id: 9821639285831501
+    identification: 
+      column-name: DIAGNÓSTICO_17
+      type: Hidden
+
+    layout: 
+      sequence: 78
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_18 ==============================
+    id: 9822087180831502
+    identification: 
+      column-name: DIAGNÓSTICO_18
+      type: Hidden
+
+    layout: 
+      sequence: 79
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_19 ==============================
+    id: 9822415223831503
+    identification: 
+      column-name: DIAGNÓSTICO_19
+      type: Hidden
+
+    layout: 
+      sequence: 80
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: DIAGNÓSTICO_20 ==============================
+    id: 9822877135831504
+    identification: 
+      column-name: DIAGNÓSTICO_20
+      type: Hidden
+
+    layout: 
+      sequence: 81
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_PRINCIPAL ===================
+    id: 9823226681831505
+    identification: 
+      column-name: POA_DIAGNÓSTICO_PRINCIPAL
+      type: Hidden
+
+    layout: 
+      sequence: 82
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_2 ===========================
+    id: 9823638005831507
+    identification: 
+      column-name: POA_DIAGNÓSTICO_2
+      type: Hidden
+
+    layout: 
+      sequence: 83
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_3 ===========================
+    id: 9824088199831508
+    identification: 
+      column-name: POA_DIAGNÓSTICO_3
+      type: Hidden
+
+    layout: 
+      sequence: 84
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_4 ===========================
+    id: 9824483195831509
+    identification: 
+      column-name: POA_DIAGNÓSTICO_4
+      type: Hidden
+
+    layout: 
+      sequence: 85
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_5 ===========================
+    id: 9824826726831510
+    identification: 
+      column-name: POA_DIAGNÓSTICO_5
+      type: Hidden
+
+    layout: 
+      sequence: 86
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_6 ===========================
+    id: 9825204787831511
+    identification: 
+      column-name: POA_DIAGNÓSTICO_6
+      type: Hidden
+
+    layout: 
+      sequence: 87
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_7 ===========================
+    id: 9825636951831513
+    identification: 
+      column-name: POA_DIAGNÓSTICO_7
+      type: Hidden
+
+    layout: 
+      sequence: 88
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_8 ===========================
+    id: 9826034934831514
+    identification: 
+      column-name: POA_DIAGNÓSTICO_8
+      type: Hidden
+
+    layout: 
+      sequence: 89
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_9 ===========================
+    id: 9826464035831515
+    identification: 
+      column-name: POA_DIAGNÓSTICO_9
+      type: Hidden
+
+    layout: 
+      sequence: 90
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_10 ==========================
+    id: 9826894359831516
+    identification: 
+      column-name: POA_DIAGNÓSTICO_10
+      type: Hidden
+
+    layout: 
+      sequence: 91
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_11 ==========================
+    id: 9827261246831517
+    identification: 
+      column-name: POA_DIAGNÓSTICO_11
+      type: Hidden
+
+    layout: 
+      sequence: 92
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_12 ==========================
+    id: 9827649856831518
+    identification: 
+      column-name: POA_DIAGNÓSTICO_12
+      type: Hidden
+
+    layout: 
+      sequence: 93
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_13 ==========================
+    id: 9828042510831520
+    identification: 
+      column-name: POA_DIAGNÓSTICO_13
+      type: Hidden
+
+    layout: 
+      sequence: 94
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_14 ==========================
+    id: 9828406120831521
+    identification: 
+      column-name: POA_DIAGNÓSTICO_14
+      type: Hidden
+
+    layout: 
+      sequence: 95
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_15 ==========================
+    id: 9828893122831522
+    identification: 
+      column-name: POA_DIAGNÓSTICO_15
+      type: Hidden
+
+    layout: 
+      sequence: 96
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_16 ==========================
+    id: 9829292229831523
+    identification: 
+      column-name: POA_DIAGNÓSTICO_16
+      type: Hidden
+
+    layout: 
+      sequence: 97
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_17 ==========================
+    id: 9829670074831524
+    identification: 
+      column-name: POA_DIAGNÓSTICO_17
+      type: Hidden
+
+    layout: 
+      sequence: 98
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_18 ==========================
+    id: 9830082838831525
+    identification: 
+      column-name: POA_DIAGNÓSTICO_18
+      type: Hidden
+
+    layout: 
+      sequence: 99
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_19 ==========================
+    id: 9830433878831526
+    identification: 
+      column-name: POA_DIAGNÓSTICO_19
+      type: Hidden
+
+    layout: 
+      sequence: 100
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: POA_DIAGNÓSTICO_20 ==========================
+    id: 9830881676831528
+    identification: 
+      column-name: POA_DIAGNÓSTICO_20
+      type: Hidden
+
+    layout: 
+      sequence: 101
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_EXTERNO_1 =====================
+    id: 9831232446831529
+    identification: 
+      column-name: PROCEDIMIENTO_EXTERNO_1
+      type: Hidden
+
+    layout: 
+      sequence: 102
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_EXTERNO_2 =====================
+    id: 9831679501831530
+    identification: 
+      column-name: PROCEDIMIENTO_EXTERNO_2
+      type: Hidden
+
+    layout: 
+      sequence: 103
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_EXTERNO_3 =====================
+    id: 9832058179831531
+    identification: 
+      column-name: PROCEDIMIENTO_EXTERNO_3
+      type: Hidden
+
+    layout: 
+      sequence: 104
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_EXTERNO_4 =====================
+    id: 9832415173831532
+    identification: 
+      column-name: PROCEDIMIENTO_EXTERNO_4
+      type: Hidden
+
+    layout: 
+      sequence: 105
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_EXTERNO_5 =====================
+    id: 9832882769831533
+    identification: 
+      column-name: PROCEDIMIENTO_EXTERNO_5
+      type: Hidden
+
+    layout: 
+      sequence: 106
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PROCEDIMIENTO_EXTERNO_6 =====================
+    id: 9833244836831535
+    identification: 
+      column-name: PROCEDIMIENTO_EXTERNO_6
+      type: Hidden
+
+    layout: 
+      sequence: 107
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: TIPO_GRD_APR ================================
+    id: 9833603235831536
+    identification: 
+      column-name: TIPO_GRD_APR
+      type: Hidden
+
+    layout: 
+      sequence: 108
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: PESO_ESPAÑOL_APR ============================
+    id: 9834014850831537
+    identification: 
+      column-name: PESO_ESPAÑOL_APR
+      type: Hidden
+
+    layout: 
+      sequence: 109
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: EDAD_EN_INGRESO =============================
+    id: 9834446371831538
+    identification: 
+      column-name: EDAD_EN_INGRESO
+      type: Hidden
+
+    layout: 
+      sequence: 110
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: MES_DE_INGRESO ==============================
+    id: 9834848834831539
+    identification: 
+      column-name: MES_DE_INGRESO
+      type: Hidden
+
+    layout: 
+      sequence: 111
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+  - # ====== Column: COLNAME_COL112_MISSING ======================
+    id: 9835268378831540
+    identification: 
+      column-name: COLNAME_COL112_MISSING
+      type: Hidden
+
+    layout: 
+      sequence: 112
+
+    sorting: 
+      default-sequence: 1
+      direction: Ascending
+
+    ui-defaults-reference: 
+      table-owner: Parsing Schema
+
+    security: 
+      escape-special-characters: true
+
+- # ====== Region: Search ======================================
+  id: 9787818853831373
+  identification: 
+    name: Search
+    type: Smart Filters
+
+  source: 
+    filtered-region: Search Results # 9787738919831373
+
+  layout: 
+    sequence: 10
+    parent-region: Breadcrumb # 9835667838831542
+    slot: SMART_FILTERS
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Blank with Attributes (No Grid)
+    template-options: 
+    - '#DEFAULT#'
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    region-display-selector: false
+    exclude-title-from-translation: false
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    settings: 
+      more-filters-suggestion-chip: false
+      compact-numbers-threshold: 10000
+      show-total-row-count: No
+
+  facets: 
+  - # ====== Facet: P4_SEARCH ====================================
+    id: 9788364091831378
+    identification: 
+      name: P4_SEARCH
+      type: Search
+
+    label: 
+      label: Search
+
+    settings: 
+      search-type: Row Search
+      input-field: Top of Faceted Search Region
+
+    layout: 
+      sequence: 10
+
+    source: 
+      database-column(s): COMUNIDAD_AUTÓNOMA,NOMBRE,FECHA_DE_NACIMIENTO,CCAA_RESIDENCIA,FECHA_DE_INGRESO,FECHA_DE_FIN_CONTACTO
+
+    security: 
+      store-value-encrypted-in-session-state: true
+
+  - # ====== Facet: P4_TIPO_ALTA =================================
+    id: 9788768887831386
+    identification: 
+      name: P4_TIPO_ALTA
+      type: Range
+
+    label: 
+      label: Tipo Alta
+      show-label-for-current-facet: true
+
+    settings: 
+      select-multiple: true
+      manual-entry: false
+
+    layout: 
+      sequence: 20
+
+    appearance: 
+      display: Inline
+
+    list-of-values: 
+      type: Static Values
+      static-values: 'STATIC2:<5;|5'
+
+    list-entries: 
+      compute-counts: true
+      show-counts: true
+      zero-count-entries: Hide
+      show-selected-first: false
+      maximum-displayed-entries: 7
+      display-filter-initially: false
+
+    actions-menu: 
+      filter: true
+      chart: false
+
+    advanced: 
+      collapsible: false
+
+    source: 
+      database-column: TIPO_ALTA
+      data-type: NUMBER
+
+    security: 
+      store-value-encrypted-in-session-state: true
+
+  - # ====== Facet: P4_CDM_APR ===================================
+    id: 9789189099831390
+    identification: 
+      name: P4_CDM_APR
+      type: Range
+
+    label: 
+      label: Cdm Apr
+      show-label-for-current-facet: true
+
+    settings: 
+      select-multiple: true
+      manual-entry: false
+
+    layout: 
+      sequence: 30
+
+    appearance: 
+      display: Inline
+
+    list-of-values: 
+      type: Static Values
+      static-values: 'STATIC2:<10;|10,10 - 500;10|500,>=500;500|'
+
+    list-entries: 
+      compute-counts: true
+      show-counts: true
+      zero-count-entries: Hide
+      show-selected-first: false
+      maximum-displayed-entries: 7
+      display-filter-initially: false
+
+    actions-menu: 
+      filter: true
+      chart: false
+
+    advanced: 
+      collapsible: false
+
+    source: 
+      database-column: CDM_APR
+      data-type: NUMBER
+
+    security: 
+      store-value-encrypted-in-session-state: true
+
+  - # ====== Facet: P4_PROCEDENCIA ===============================
+    id: 9789583109831395
+    identification: 
+      name: P4_PROCEDENCIA
+      type: Range
+
+    label: 
+      label: Procedencia
+      show-label-for-current-facet: true
+
+    settings: 
+      select-multiple: true
+      manual-entry: false
+
+    layout: 
+      sequence: 40
+
+    appearance: 
+      display: Inline
+
+    list-of-values: 
+      type: Static Values
+      static-values: 'STATIC2:<20;|20,>=20;20|'
+
+    list-entries: 
+      compute-counts: true
+      show-counts: true
+      zero-count-entries: Hide
+      show-selected-first: false
+      maximum-displayed-entries: 7
+      display-filter-initially: false
+
+    actions-menu: 
+      filter: true
+      chart: false
+
+    advanced: 
+      collapsible: false
+
+    source: 
+      database-column: PROCEDENCIA
+      data-type: NUMBER
+
+    security: 
+      store-value-encrypted-in-session-state: true
+
+  - # ====== Facet: P4_CONTINUIDAD_ASISTENCIAL ===================
+    id: 9789946507831399
+    identification: 
+      name: P4_CONTINUIDAD_ASISTENCIAL
+      type: Range
+
+    label: 
+      label: Continuidad Asistencial
+      show-label-for-current-facet: true
+
+    settings: 
+      select-multiple: true
+      manual-entry: false
+
+    layout: 
+      sequence: 50
+
+    appearance: 
+      display: Inline
+
+    list-of-values: 
+      type: Static Values
+      static-values: 'STATIC2:<5;|5,5 - 20;5|20,>=20;20|'
+
+    list-entries: 
+      compute-counts: true
+      show-counts: true
+      zero-count-entries: Hide
+      show-selected-first: false
+      maximum-displayed-entries: 7
+      display-filter-initially: false
+
+    actions-menu: 
+      filter: true
+      chart: false
+
+    advanced: 
+      collapsible: false
+
+    source: 
+      database-column: CONTINUIDAD_ASISTENCIAL
+      data-type: NUMBER
+
+    security: 
+      store-value-encrypted-in-session-state: true
+
+  - # ====== Facet: P4_INGRESO_EN_UCI ============================
+    id: 9790322848831403
+    identification: 
+      name: P4_INGRESO_EN_UCI
+      type: Range
+
+    label: 
+      label: Ingreso En Uci
+      show-label-for-current-facet: true
+
+    settings: 
+      select-multiple: true
+      manual-entry: false
+
+    layout: 
+      sequence: 60
+
+    appearance: 
+      display: Inline
+
+    list-of-values: 
+      type: Static Values
+      static-values: 'STATIC2:<2;|2,>=2;2|'
+
+    list-entries: 
+      compute-counts: true
+      show-counts: true
+      zero-count-entries: Hide
+      show-selected-first: false
+      maximum-displayed-entries: 7
+      display-filter-initially: false
+
+    actions-menu: 
+      filter: true
+      chart: false
+
+    advanced: 
+      collapsible: false
+
+    source: 
+      database-column: INGRESO_EN_UCI
+      data-type: NUMBER
+
+    security: 
+      store-value-encrypted-in-session-state: true
+
+  filters: 
+  - # ====== Filter: P4_SEARCH ===================================
+    id: 9788364091831378
+    identification: 
+      name: P4_SEARCH
+      type: Search
+
+    label: 
+      label: Search
+
+    settings: 
+      search-type: Row Search
+      collapsed-search-field: false
+
+    layout: 
+      sequence: 10
+
+    source: 
+      database-column(s): COMUNIDAD_AUTÓNOMA,NOMBRE,FECHA_DE_NACIMIENTO,CCAA_RESIDENCIA,FECHA_DE_INGRESO,FECHA_DE_FIN_CONTACTO
+
+    security: 
+      store-value-encrypted-in-session-state: true
+
+  - # ====== Filter: P4_TIPO_ALTA ================================
+    id: 9788768887831386
+    identification: 
+      name: P4_TIPO_ALTA
+      type: Range
+
+    label: 
+      label: Tipo Alta
+
+    settings: 
+      select-multiple: true
+      manual-entry: false
+
+    layout: 
+      sequence: 20
+
+    list-of-values: 
+      type: Static Values
+      static-values: 'STATIC2:<5;|5'
+
+    list-entries: 
+      compute-counts: true
+      show-counts: true
+      zero-count-entries: Hide
+      show-selected-first: false
+      client-side-filtering: false
+
+    suggestions: 
+      type: Dynamic
+      show-label: true
+
+    source: 
+      database-column: TIPO_ALTA
+      data-type: NUMBER
+
+    security: 
+      store-value-encrypted-in-session-state: true
+
+  - # ====== Filter: P4_CDM_APR ==================================
+    id: 9789189099831390
+    identification: 
+      name: P4_CDM_APR
+      type: Range
+
+    label: 
+      label: Cdm Apr
+
+    settings: 
+      select-multiple: true
+      manual-entry: false
+
+    layout: 
+      sequence: 30
+
+    list-of-values: 
+      type: Static Values
+      static-values: 'STATIC2:<10;|10,10 - 500;10|500,>=500;500|'
+
+    list-entries: 
+      compute-counts: true
+      show-counts: true
+      zero-count-entries: Hide
+      show-selected-first: false
+      client-side-filtering: false
+
+    suggestions: 
+      type: Dynamic
+      show-label: true
+
+    source: 
+      database-column: CDM_APR
+      data-type: NUMBER
+
+    security: 
+      store-value-encrypted-in-session-state: true
+
+  - # ====== Filter: P4_PROCEDENCIA ==============================
+    id: 9789583109831395
+    identification: 
+      name: P4_PROCEDENCIA
+      type: Range
+
+    label: 
+      label: Procedencia
+
+    settings: 
+      select-multiple: true
+      manual-entry: false
+
+    layout: 
+      sequence: 40
+
+    list-of-values: 
+      type: Static Values
+      static-values: 'STATIC2:<20;|20,>=20;20|'
+
+    list-entries: 
+      compute-counts: true
+      show-counts: true
+      zero-count-entries: Hide
+      show-selected-first: false
+      client-side-filtering: false
+
+    suggestions: 
+      type: Dynamic
+      show-label: true
+
+    source: 
+      database-column: PROCEDENCIA
+      data-type: NUMBER
+
+    security: 
+      store-value-encrypted-in-session-state: true
+
+  - # ====== Filter: P4_CONTINUIDAD_ASISTENCIAL ==================
+    id: 9789946507831399
+    identification: 
+      name: P4_CONTINUIDAD_ASISTENCIAL
+      type: Range
+
+    label: 
+      label: Continuidad Asistencial
+
+    settings: 
+      select-multiple: true
+      manual-entry: false
+
+    layout: 
+      sequence: 50
+
+    list-of-values: 
+      type: Static Values
+      static-values: 'STATIC2:<5;|5,5 - 20;5|20,>=20;20|'
+
+    list-entries: 
+      compute-counts: true
+      show-counts: true
+      zero-count-entries: Hide
+      show-selected-first: false
+      client-side-filtering: false
+
+    suggestions: 
+      type: Dynamic
+      show-label: true
+
+    source: 
+      database-column: CONTINUIDAD_ASISTENCIAL
+      data-type: NUMBER
+
+    security: 
+      store-value-encrypted-in-session-state: true
+
+  - # ====== Filter: P4_INGRESO_EN_UCI ===========================
+    id: 9790322848831403
+    identification: 
+      name: P4_INGRESO_EN_UCI
+      type: Range
+
+    label: 
+      label: Ingreso En Uci
+
+    settings: 
+      select-multiple: true
+      manual-entry: false
+
+    layout: 
+      sequence: 60
+
+    list-of-values: 
+      type: Static Values
+      static-values: 'STATIC2:<2;|2,>=2;2|'
+
+    list-entries: 
+      compute-counts: true
+      show-counts: true
+      zero-count-entries: Hide
+      show-selected-first: false
+      client-side-filtering: false
+
+    suggestions: 
+      type: Dynamic
+      show-label: true
+
+    source: 
+      database-column: INGRESO_EN_UCI
+      data-type: NUMBER
+
+    security: 
+      store-value-encrypted-in-session-state: true
+
+- # ====== Region: Breadcrumb ==================================
+  id: 9835667838831542
+  identification: 
+    name: Breadcrumb
+    type: Breadcrumb
+
+  source: 
+    breadcrumb: Breadcrumb # 9628457241830644
+
+  layout: 
+    sequence: 20
+    parent-region: No Parent
+    slot: REGION_POSITION_01
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Title Bar
+    template-options: 
+    - '#DEFAULT#'
+    - t-BreadcrumbRegion--useBreadcrumbTitle
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    region-display-selector: false
+    exclude-title-from-translation: false
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    appearance: 
+      breadcrumb-template: Breadcrumb
+      template-options: 
+      - '#DEFAULT#'
+
